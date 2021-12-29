@@ -11,9 +11,7 @@
           <a href="/manager/showTeacher?page=1">老师信息</a>
         </li>
         <li class="active">
-          <a href="/manager/showSC?page=1"
-            >选课情况<span class="sr-only">(current)</span></a
-          >
+          <a href="/manager/showSC?page=1">选课情况<span class="sr-only">(current)</span></a>
         </li>
       </ul>
     </div>
@@ -23,11 +21,8 @@
       </h2>
 
       <div class="table-responsive">
-        {{each teachers}}<a
-          class="btn btn-default"
-          href="/manager/showSC?page=1&course={{$value.course}}"
-          >{{$value.course}}({{$value.name}})</a
-        >{{/each}}
+        {{each teachers}}<a class="btn btn-default"
+          href="/manager/showSC?page=1&course={{$value.course}}">{{$value.course}}({{$value.name}})</a>{{/each}}
         <table class="table table-striped">
           <thead>
             <tr>
@@ -48,18 +43,17 @@
         </table>
 
         <%if(page>1){%>
-        <a class="btn btn-default" href="/manager/showTeacher?page=<%=page-1%>"
-          ><<</a
-        >
-        <%}%> <% for(let i = 1; i <= total; i++){%>
-        <a class="btn btn-default" href="/manager/showTeacher?page=<%= i %>">
-          <%= i %>
-        </a>
-        <% } %> <% if(page < total){%>
-        <a class="btn btn-default" href="/manager/showTeacher?page={{page+1}}"
-          >>></a
-        >
-        <%}%>
+          <a class="btn btn-default" href="/manager/showTeacher?page=<%=page-1%>">
+            <<< /a>
+              <%}%>
+                <% for(let i=1; i <=total; i++){%>
+                  <a class="btn btn-default" href="/manager/showTeacher?page=<%= i %>">
+                    <%= i %>
+                  </a>
+                  <% } %>
+                    <% if(page < total){%>
+                      <a class="btn btn-default" href="/manager/showTeacher?page={{page+1}}">>></a>
+                      <%}%>
       </div>
     </div>
   </div>

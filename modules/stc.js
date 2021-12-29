@@ -8,9 +8,9 @@ const Admin = mongoose.model(
     password: String,
   })
 );
-Admin.create({ username: "zxc", password: "123456" }).then((doc) =>
-  console.log(doc)
-);
+// Admin.create({ username: "zxc", password: "123456" }).then((doc) =>
+//   console.log(doc)
+// );
 const Student = mongoose.model(
   "Student",
   mongoose.Schema({
