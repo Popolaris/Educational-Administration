@@ -21,7 +21,7 @@ module.exports = async (req, res) => {
   // res.send(scs);
   res.render("manager/show_sc", { user, total, page, scoredata, teachers });
   }catch (err) {
-    next(err);
+    
   }
 };
 
